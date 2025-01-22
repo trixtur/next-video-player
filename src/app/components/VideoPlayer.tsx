@@ -40,7 +40,29 @@ export const VideoPlayer = (props) => {
 
     return (
         <div className='video-player' data-vjs-player>
-            <div ref={videoRef} />
+            <div ref={videoRef}/>
+            <style jsx>
+                {`
+                    .video-player {
+                        position: relative;
+                        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+                    }
+
+                    .video-player > div {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    @media (max-width: 768px) {
+                        .video-player {
+                            padding-top: 75%; /* 4:3 Aspect Ratio for smaller screens */
+                        }
+                    }
+                `}
+            </style>
         </div>
     );
 };
