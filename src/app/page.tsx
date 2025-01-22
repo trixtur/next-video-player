@@ -30,9 +30,11 @@ const App = () => {
     };
 
     return (
-        <div className='video-wrapper'>
+        <div>
             <h1>React and Video.js Example</h1>
-            <VideoPlayer options={videoJsOptions} onReady={handlePlayerReady} />
+            <div className='flex items-center justify-center h-screen'>
+                <VideoPlayer options={videoJsOptions} onReady={handlePlayerReady} />
+            </div>
         </div>
     );
 };
