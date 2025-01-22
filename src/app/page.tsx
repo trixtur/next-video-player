@@ -11,7 +11,7 @@ const App = () => {
         fluid: true,
         sources: [
             {
-                src: 'videos/sample.mp4',
+                src: 'https://storage.googleapis.com/media-test-permanent/bob-brickman.mp4',
                 type: 'video/mp4',
             },
         ],
